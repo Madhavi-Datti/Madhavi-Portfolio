@@ -1,0 +1,691 @@
+/* Import Bootstrap CSS */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom CSS */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #ffffff;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.container {
+  width: 100%;
+}
+.navbar {
+  padding: 1rem;
+  background-color: #0c0003;
+  color: #FFB6C1;
+  border: none;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3); 
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-brand span:hover {
+  color: #FF4081 !important;
+}
+.nav-link {
+  color: #FFB6C1!important; 
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+.nav-link:visited, 
+.nav-link:focus, 
+.nav-link:active {
+  color: #FFB6C1 !important; 
+  font-weight: 500 !important;
+}
+
+.nav-link:hover {
+  color:#FFB6C1 !important; 
+}
+.navbar-toggler {
+  border: none;
+  padding: 0.2rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding: 1rem 0;
+  }
+  
+  .btn-custom {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+}
+
+
+.highlight {
+  color: #ffd700;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide {
+  animation: slideUp 1.2s ease-in-out;
+}
+.animate-fade {
+  animation: fadeIn 1s ease-in-out;
+}
+.profile-img {
+  width: 100%; 
+  max-width: 360px;
+  height: auto; 
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 30px rgba(12, 0, 3, 0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.social-icon {
+  color: #FFB6C1;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #FF4081;
+}
+
+.section {
+  padding: 60px 0;
+  
+}
+
+.text{
+  font-size: 16px;
+  line-height: 2rem;
+}
+
+.title{
+  font-size: 2.5rem;
+  color: #FF4081;
+}
+.btn-color{
+  background-color: #FF4081;
+  color: #ffffff;
+
+}
+.btn-color:hover{
+  background-color:#f01d63 ;
+  color: #ffffff;
+  
+}
+.bg-color{
+  background-color: #f9e9eb;
+}
+
+.text-color{
+  color: #FF4081;
+}
+
+.experience-section {
+  color: #FF4081;
+  background:#f9e9eb;
+  padding: 80px 0;
+  position: relative;
+}
+
+.experience-roadmap {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.experience-roadmap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+  transform: translateX(-50%);
+}
+
+.experience-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.experience-content {
+  width: 45%;
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-content:hover {
+  transform: scale(1.05);
+}
+
+.experience-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+.experience-item:nth-child(odd) .experience-content {
+  margin-left: auto;
+}
+
+.experience-item:nth-child(even) .experience-content {
+  margin-right: auto;
+}
+
+.experience-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.company {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.years-of-experience {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 60px 0;
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Skill Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, rotate 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  /* transform: scale(1) rotate(5deg); */
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Skill Icon */
+.skill-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Skill Name */
+.skill-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Progress Bar Container */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animated Progress Fill */
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+}
+
+/* Percentage Text Inside the Bar */
+.progress-text {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+/* Education Section Styling */
+.education-section {
+  padding: 80px 0;
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+  color: white;
+  text-align: center;
+}
+
+/* Title Styling */
+.education-title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Education Content Layout */
+.education-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card Design with Glassmorphism Effect */
+.education-card {
+  background: rgba(255, 255, 255, 0.253);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effects */
+.education-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Styling */
+.education-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Keyframes for Glowing Effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 204, 0, 1);
+  }
+}
+
+/* Degree Name */
+.degree {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* University Name */
+.university {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 10px 0;
+  color: #f5f5f5;
+}
+
+/* Graduation Year */
+.year {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Certifications Section */
+.certifications-section {
+  text-align: center;
+  padding: 50px 0;
+  background: #f9e9eb ;
+}
+
+/* Title */
+.certifications-title {
+  color: #FF4081;
+  margin-bottom: 50px;
+}
+
+/* Certificate Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Certificate Card */
+.certificate-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+  
+}
+
+/* Certificate Image */
+.certificate-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+/* Certificate Title */
+.certificate-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+/* Download Button */
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 8px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/* Download Icon */
+.download-icon {
+  margin-right: 5px;
+}
+
+.services-section {
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  color: #FF4081;
+  margin-bottom: 15px;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url("/images/bg.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: #FF4081;
+  margin-bottom: 50px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: #0c0003; /* Pinkish color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 20px rgba(12, 0, 3, 0.9);
+  transition: background 0.3s ease-in-out;
+}
+
+.icon-circle .icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-weight: bolder;
+}
+
+.icon-circle:hover {
+  background: #ff4081;
+  
+}
+
+.contact-link, .location-text {
+  color: #0c0003;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.contact-link:hover {
+  color: #ff4081;
+  font-weight: 500;
+}
+
+.about-bg
+{
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+}
+
+.project-section{
+  padding: 30px 20px;
+ 
+}
+.project-section-title{
+  font-size: 2.5rem;
+}
+
+.contact-sec {
+  background: linear-gradient(45deg, #0c0003, #0c0003, #FF4081);
+  padding: 80px 0;
+}
+
+.contact-card {
+  background: #a3a3a337;
+  border-radius: 12px;
+  padding: 30px;
+  color: white;
+}
+
+.contact-item .icon {
+  color: #FF4081;
+  width: 25px;
+  height: 25px;
+}
+
+.social-links .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.social-icon.linkedin {
+  background-color: #052bb4;
+}
+
+.social-icon.github {
+  background-color: #0f0f0f;
+}
+
+.social-icon.instagram {
+ background: linear-gradient(120deg,  #0846e4d0, #f39c12, #de0ea0, #cc0909);
+}
+
+.social-icon.whatsapp {
+  background-color: #25d366;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.contact-form {
+  background: #a3a3a337;
+  border-radius: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #a3a3a398;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.btn-color {
+  background-color: #FF4081;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-color:hover {
+  background-color: #e91e63;
+}
