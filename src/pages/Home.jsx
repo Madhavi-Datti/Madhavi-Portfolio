@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Hand, CoffeeIcon, Code, Database, Atom, FileCode, Grid, Palette, LeafIcon, PowerCircle, Server, GitBranch, Feather, FileJson, RectangleVerticalIcon, Cloud, RocketIcon, Shield, Download , FileText, Video, Globe, Settings, Phone, MapPin, Instagram, Send, MessageCircle, Youtube} from "lucide-react";
+import { Hand, CoffeeIcon, Code, Database, Atom, FileCode, Grid, Palette, LeafIcon, PowerCircle, Server, GitBranch, Feather, FileJson, RectangleVerticalIcon, Cloud, RocketIcon, Shield, Download , FileText, Video, Globe, Settings, Phone, MapPin, Instagram, Send, MessageCircle, Youtube, Laptop} from "lucide-react";
 
 import { Github, Linkedin, Mail } from 'lucide-react';
 
@@ -144,6 +144,11 @@ function Home() {
             <Video className="service-icon" />
             <h3 className="service-title">Video Editing</h3>
             <p>Creating engaging text based videos for social media platforms using canva.</p>
+          </div>
+            <div className="service-box">
+            <Laptop className="service-icon" />
+            <h3 className="service-title">Graphic Designing</h3>
+            <p>Designing visually appealing logos, posters, and social media posts using Canva & Adobe tools.</p>
           </div>
 
         </div>
